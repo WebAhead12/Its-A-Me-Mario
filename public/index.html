@@ -1,60 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Exo+2:wght@300&family=Gelasio&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="mediaStyle.css" />
-  </head>
-  <body>
+        href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Exo+2:wght@300&family=Gelasio&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+</head>
+
+<body>
     <img src="GithubLogo.png" class="githubBackground" />
     <div>
-      <div class="container">
-        <label class="usernameClass usernameLabel" for="username"
-          >Github Lookup</label
-        >
-        <br />
-        <input
-          class="usernameClass usernameInput"
-          id="username"
-          name="username"
-          placeholder="Enter a github username"
-        />
-        <div class="buttonContainer">
-          <i class="fa fa-github submitButton"></i>
+        <div class="container">
+            <label class="usernameClass usernameLabel" for="username">Github Lookup</label>
+            <br />
+            <input class="usernameClass usernameInput" id="username" name="username"
+                placeholder="Enter a github username" />
+            <div class="buttonContainer">
+                <i class="fa fa-github submitButton"></i>
+            </div>
         </div>
-      </div>
-      <div class="weatherContainer">
-        <p class="weatherLocation">Not Known</p>
-        <img class="weatherImage" src="GeolocationNotAvailable.png" alt="" />
-        <p class="weatherTemperature">xx<sup>&#176;</sup></p>
-        <p class="weatherDescription">Not Known</p>
-      </div>
-      <div class="resultsContainer">
-        <div class="profileContainer"></div>
-        <div class="infoContainer">
-          <div class="cloneRepo">
-            <div class="repoName"></div>
-            <div class="repoOwner"></div>
-            <div class="repoDesc"></div>
-            <div class="repoUpdate"></div>
-            <div class="repoCreate"></div>
-            <div class="repoStar"></div>
-          </div>
+        <div class="resultsContainer">
+            <div class="profileContainer"></div>
+            <div class="infoContainer">
+                <div class="cloneRepo">
+                    <div class="repoName"></div>
+                    <div class="repoOwner"></div>
+                    <div class="repoDesc"></div>
+                    <div class="repoUpdate"></div>
+                    <div class="repoCreate"></div>
+                    <div class="repoStar"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <script src="githubInfo.js"></script>
-    <script src="weatherInfo.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
