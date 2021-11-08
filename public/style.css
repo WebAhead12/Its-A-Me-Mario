@@ -1,0 +1,420 @@
+html,
+body {
+  margin: 0;
+  background-color: #cacac8;
+
+  /* background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%); */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.githubBackground {
+  z-index: 0;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  opacity: 0.05;
+}
+
+body div {
+  z-index: 1;
+}
+
+.container {
+  z-index: inherit;
+  width: 50%;
+  height: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 2.5% 25%;
+  font-size: 3.5vw;
+}
+
+.usernameClass {
+  z-index: inherit;
+  text-align: center;
+  width: 50%;
+  font-family: "Gelasio", serif;
+  font-size: 1.5vw;
+}
+
+.usernameLabel {
+  z-index: inherit;
+  font-size: 3.5vw;
+}
+
+.buttonContainer {
+  z-index: inherit;
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submitButton {
+  z-index: inherit;
+  width: 45%;
+  font-size: 2.25vw;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 600ms;
+}
+
+.submitButton:hover {
+  transform: scale(1.15);
+}
+
+.usernameInput {
+  z-index: inherit;
+  box-shadow: 4px 4px 10px grey;
+  height: 7.5vh;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #414141, #000000) border-box;
+  border-radius: 10px;
+  border: 4px solid transparent;
+}
+
+.fa-github {
+  z-index: inherit;
+  background: #000000;
+  color: rgb(253, 253, 253);
+}
+
+.weatherContainer {
+  z-index: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1%;
+  width: 20%;
+  min-height: 250px;
+  height: 15%;
+
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px grey;
+  color: white;
+  font-family: "Gelasio", serif;
+  font-size: large;
+  background-color: #4b9cd3;
+  transition: ease-in-out 600ms;
+
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.weatherContainer:hover {
+  transform: scale(1.05);
+}
+
+.weatherLocation {
+  z-index: inherit;
+  padding-left: 5%;
+  width: 45%;
+  font-size: 2.5vw;
+}
+
+.weatherImage {
+  z-index: inherit;
+  margin-left: auto;
+  width: 5vw;
+  height: 5vw;
+}
+
+.weatherTemperature {
+  z-index: inherit;
+  width: 45%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  margin-top: auto;
+  font-size: 2.5vw;
+}
+
+.weatherDescription {
+  z-index: inherit;
+  margin-top: auto;
+  margin-left: auto;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  font-size: 2.5vw;
+}
+
+.resultsContainer {
+  z-index: inherit;
+  min-height: calc(50%);
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 0.75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profileContainer {
+  z-index: inherit;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  position: relative;
+  width: 30%;
+  height: 380px;
+  margin: 0 1.25%;
+  border: 2px solid rgb(97, 97, 97);
+  border-radius: 10px;
+}
+
+/* the github profile image */
+.profileImage {
+  z-index: inherit;
+  position: absolute;
+  margin: 10px 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  float: left;
+}
+
+.profileContainer a {
+  z-index: inherit;
+  position: absolute;
+  font-family: "Gelasio", serif;
+  margin-top: 200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.profileContainer a:link {
+  color: black;
+}
+
+/* visited link */
+.profileContainer a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.profileContainer a:hover {
+  color: grey;
+}
+
+/* selected link */
+.profileContainer a:active {
+  color: black;
+}
+
+/* followers and following ll github */
+.follow {
+  z-index: inherit;
+  position: absolute;
+  margin-top: 235px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-family: "Gelasio", serif;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.follow div {
+  z-index: inherit;
+  margin: 0 10px;
+}
+
+/* the bio of the github */
+
+.bio {
+  z-index: inherit;
+  position: absolute;
+  font-family: "Gelasio", serif;
+  width: 95%;
+  height: 80px;
+  margin-top: 280px;
+  margin-left: 2.5%;
+  overflow: hidden;
+  font-size: 1.15rem;
+}
+
+.bio div {
+  z-index: inherit;
+  width: 100%;
+  height: 95%;
+  /* margin-bottom: 10%; */
+  overflow: auto;
+}
+
+.bio div p {
+  z-index: inherit;
+  width: 100%;
+  overflow: auto;
+}
+
+.infoContainer {
+  z-index: inherit;
+  width: 63%;
+  height: 520px;
+  margin: 0 1.5%;
+  border: 4px solid rgb(97, 97, 97);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.infoContainer h1 {
+  z-index: inherit;
+  margin: auto 50%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.infoContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cloneRepo {
+  z-index: inherit;
+  width: 70%;
+  font-size: 20px;
+  margin-top: 15px;
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  transition: ease-in-out 600ms;
+  backface-visibility: hidden;
+  background-color: #72a0c1;
+}
+
+.cloneRepo:hover {
+  transform: scale(1.05);
+}
+
+.repoName {
+  z-index: inherit;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.repoName a:link {
+  color: black;
+}
+
+/* visited link */
+.repoName a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.repoName a:hover {
+  color: grey;
+}
+
+/* selected link */
+.repoName a:active {
+  color: black;
+}
+
+.repoStar {
+  font-family: "FontAwesome";
+  color: rgba(228, 228, 9, 0.911);
+}
+
+.fa-star {
+  color: yellow;
+}
+
+@media screen and (max-width: 800px) {
+  .usernameClass {
+    text-align: center;
+    width: 50%;
+    font-family: "Gelasio", serif;
+    font-size: 3vw;
+  }
+
+  .usernameLabel {
+    font-size: 4vw;
+  }
+
+  .submitButton {
+    width: 50%;
+    height: 120%;
+    font-size: 2.25vw;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .resultsContainer {
+    margin-top: 10%;
+  }
+
+  .weatherContainer {
+    min-height: 120px;
+    cursor: pointer;
+  }
+
+  .weatherLocation {
+    padding-left: 5%;
+    width: 45%;
+    font-size: 3.25vw;
+  }
+
+  .weatherImage {
+    margin-left: auto;
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .weatherTemperature {
+    width: 45%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    font-size: 3.25vw;
+  }
+
+  .weatherDescription {
+    margin-top: auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-size: 3.25vw;
+  }
+
+  .profileContainer {
+    width: 100%;
+    height: 380px;
+    margin: auto 1.5%;
+    margin-bottom: 5%;
+    border: 2px solid rgb(97, 97, 97);
+  }
+
+  .infoContainer {
+    width: 100%;
+    height: 380px;
+    margin: auto 1.5%;
+    border: 4px solid rgb(97, 97, 97);
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
