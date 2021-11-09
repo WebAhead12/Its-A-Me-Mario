@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Exo+2:wght@300&family=Gelasio&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <img src="GithubLogo.png" class="githubBackground" />
+    <form action="/" method="POST" class="container">
+      <label class="usernameClass usernameLabel" for="username">Log-In</label>
+      <br />
+      <input
+        class="usernameClass usernameInput"
+        id="username"
+        name="username"
+        placeholder="Sign In With Your GitHub Username"
+        required
+      />
+      <button class="buttonContainer" type="submit">
+        <i class="fa fa-github submitButton"></i>
+      </button>
+    </form>
+
+    <script src="signIn.js"></script>
+  </body>
+</html>
