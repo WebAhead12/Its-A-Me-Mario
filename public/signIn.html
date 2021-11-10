@@ -19,14 +19,20 @@
       <label class="loginLabel" for="username">Log-In</label>
     </dev>
     <br />
-
     <input class="loginInput" id="username" name="username" placeholder="Sign In With Your GitHub Username" required />
-    <br><input class="loginInput" id="password" name="password" placeholder="Sign In With Your GitHub Password"
-      required />
+    <dev class="pass">
+      <input class="loginPass" id="password" name="password" placeholder="Password" required />
+    </dev>
 
     <button class="loginButtonContainer" type="submit">
       <i class="fa fa-github loginButton"></i>
     </button>
+  </form>
+  <div class="lastSearched">Last Signed:</div>
+
+  <button class="loginButtonContainer" type="submit">
+    <i class="fa fa-github loginButton"></i>
+  </button>
   </form>
 
   <script src="signIn.js"></script>
