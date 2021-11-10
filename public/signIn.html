@@ -17,18 +17,22 @@
 
   <body>
     <img src="GithubLogo.png" class="githubBackground" />
-    <form action="/" method="POST" class="container">
-      <label class="usernameClass usernameLabel" for="username">Log-In</label>
+    <form action="/" method="POST" class="loginContainer">
+      <dev class="loginTitle">
+        <label class="loginLabel" for="username">Log-In</label>
+      </dev>
       <br />
+
       <input
-        class="usernameClass usernameInput"
+        class="loginInput"
         id="username"
         name="username"
         placeholder="Sign In With Your GitHub Username"
         required
       />
-      <button class="buttonContainer" type="submit">
-        <i class="fa fa-github submitButton"></i>
+
+      <button class="loginButtonContainer" type="submit">
+        <i class="fa fa-github loginButton"></i>
       </button>
     </form>
     <div class="lastSearched">Last Signed:</div>
