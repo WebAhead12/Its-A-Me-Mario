@@ -1,7 +1,9 @@
 html,
 body {
   margin: 0;
-  background-color: #cacac8;
+  background-color: #E8D6CB;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
 
   /* background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%); */
   -ms-overflow-style: none; /* IE and Edge */
@@ -22,6 +24,8 @@ body::-webkit-scrollbar {
   top: 50%;
   opacity: 0.05;
 }
+
+
 
 body div {
   z-index: 1;
@@ -46,7 +50,7 @@ body div {
   z-index: inherit;
   text-align: center;
   width: 50%;
-  font-family: "Gelasio", serif;
+
   font-size: 1.5vw;
 }
 
@@ -79,78 +83,22 @@ body div {
 
 .usernameInput {
   z-index: inherit;
-  box-shadow: 4px 4px 10px grey;
-  height: 7.5vh;
+  /* box-shadow: 4px 4px 10px grey; */
+  height: 6vh;
   background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(to right, #414141, #000000) border-box;
   border-radius: 10px;
-  border: 4px solid transparent;
+  border: 2px solid transparent;
+}
+
+.fa{
+  margin-top: 15px;
 }
 
 .fa-github {
   z-index: inherit;
   background: #000000;
   color: rgb(253, 253, 253);
-}
-
-.weatherContainer {
-  z-index: inherit;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 1%;
-  width: 20%;
-  min-height: 250px;
-  height: 15%;
-
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 4px 4px 10px grey;
-  color: white;
-  font-family: "Gelasio", serif;
-  font-size: large;
-  background-color: #4b9cd3;
-  transition: ease-in-out 600ms;
-
-  display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-.weatherContainer:hover {
-  transform: scale(1.05);
-}
-
-.weatherLocation {
-  z-index: inherit;
-  padding-left: 5%;
-  width: 45%;
-  font-size: 2.5vw;
-}
-
-.weatherImage {
-  z-index: inherit;
-  margin-left: auto;
-  width: 5vw;
-  height: 5vw;
-}
-
-.weatherTemperature {
-  z-index: inherit;
-  width: 45%;
-  padding-left: 5%;
-  padding-bottom: 5%;
-  margin-top: auto;
-  font-size: 2.5vw;
-}
-
-.weatherDescription {
-  z-index: inherit;
-  margin-top: auto;
-  margin-left: auto;
-  padding-right: 5%;
-  padding-bottom: 5%;
-  font-size: 2.5vw;
 }
 
 .resultsContainer {
@@ -163,15 +111,24 @@ body div {
   flex-wrap: wrap;
 }
 
+.profileName{
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
 .profileContainer {
   z-index: inherit;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   position: relative;
-  width: 30%;
+  width: 17%;
   height: 380px;
-  margin: 0 1.25%;
-  border: 2px solid rgb(97, 97, 97);
+  /* margin: 0 1.25%; */
+  /* border: 2px solid rgb(97, 97, 97); */
   border-radius: 10px;
+  background-color: #6ab88bad;
+  margin-left: 10%;
+      margin-top: 3%;
 }
 
 /* the github profile image */
@@ -190,7 +147,7 @@ body div {
 .profileContainer a {
   z-index: inherit;
   position: absolute;
-  font-family: "Gelasio", serif;
+
   margin-top: 200px;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -217,14 +174,15 @@ body div {
 
 /* followers and following ll github */
 .follow {
+  text-align: center;
   z-index: inherit;
   position: absolute;
   margin-top: 235px;
   margin-left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
-  font-family: "Gelasio", serif;
-  font-size: 1.15rem;
+
+  font-size: 0.9rem;
   display: flex;
   justify-content: space-between;
 }
@@ -239,24 +197,27 @@ body div {
 .bio {
   z-index: inherit;
   position: absolute;
-  font-family: "Gelasio", serif;
+
   width: 95%;
   height: 80px;
   margin-top: 280px;
   margin-left: 2.5%;
   overflow: hidden;
-  font-size: 1.15rem;
+  font-size: 0.9rem;
 }
 
 .bio div {
   z-index: inherit;
   width: 100%;
   height: 95%;
-  /* margin-bottom: 10%; */
+  
   overflow: auto;
+  text-align:start;
+  margin-left: 5px;
 }
 
 .bio div p {
+  
   z-index: inherit;
   width: 100%;
   overflow: auto;
@@ -266,57 +227,68 @@ body div {
   z-index: inherit;
   width: 63%;
   height: 520px;
-  margin: 0 1.5%;
-  border: 4px solid rgb(97, 97, 97);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 10px;
-  overflow: auto;
+  /* margin: 0 1.5%; */
+  /* border: 4px solid rgb(97, 97, 97);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  /* border-radius: 10px; */
+  /* overflow: auto; */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
+  margin-left: 5%;
 }
 
 .infoContainer h1 {
+  padding-top: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;s
   z-index: inherit;
-  margin: auto 50%;
+  margin: auto 20%;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .infoContainer::-webkit-scrollbar {
   display: none;
 }
+.repoHeader{
 
+
+}
 .cloneRepo {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   z-index: inherit;
-  width: 70%;
-  font-size: 20px;
+  width: 50%;
+  height: 20%;
+  /* font-size: 20px; */
   margin-top: 15px;
-  border: 1px solid rgb(97, 97, 97);
+  /* border: 1px solid rgb(97, 97, 97); */
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji";
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding: 40px;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
 
   transition: ease-in-out 600ms;
   backface-visibility: hidden;
-  background-color: #72a0c1;
+  background-color: #B58DB6;
 }
 
 .cloneRepo:hover {
   transform: scale(1.05);
 }
-
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 .repoName {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   z-index: inherit;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  
 }
 
 .repoName a:link {
@@ -347,11 +319,39 @@ body div {
   color: yellow;
 }
 
+.lastSearched {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+
+.lastSignedName {
+  margin-top: 10px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.btn{
+  background-color: #5D2E46;
+  color: #fff;
+  
+}
+a{
+  color: rgb(255, 255, 255);
+}
 @media screen and (max-width: 800px) {
   .usernameClass {
     text-align: center;
     width: 50%;
-    font-family: "Gelasio", serif;
+
     font-size: 3vw;
   }
 
@@ -371,41 +371,24 @@ body div {
     margin-top: 10%;
   }
 
-  .profileContainer {
+  /* .profileContainer {
     width: 100%;
     height: 380px;
     margin: auto 1.5%;
     margin-bottom: 5%;
     border: 2px solid rgb(97, 97, 97);
-  }
+    background-color: rgba(141, 94, 8, 0.87);
+  } */
 
   .infoContainer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     width: 100%;
     height: 380px;
-    margin: auto 1.5%;
+    /* margin: auto 1.5%;
     border: 4px solid rgb(97, 97, 97);
-    overflow-y: auto;
+    overflow-y: auto; */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    
   }
-}
-
-.lastSearched {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  justify-content: center;
-  margin: auto;
-  width: 30%;
-}
-
-.lastSignedName {
-  margin-top: 10px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid #ccc;
 }

@@ -38,11 +38,12 @@ function fetchUsername(usernameInput) {
       //name
       const profile = document.createElement("h2");
       profile.innerHTML = `<a href=${data.html_url}>${data.login}</a>`;
+      profile.className = "profileName";
       profileContainer.appendChild(profile);
       //bio
       const bio = document.createElement("div");
       bio.className = "bio";
-      bio.innerHTML = `<strong>Bio</strong><div><p>${data.bio}</p></div>`;
+      bio.innerHTML = `<div><p>${data.bio}.</p></div>`;
       profileContainer.appendChild(bio);
       //profile image
       const image = document.createElement("img");
@@ -56,11 +57,11 @@ function fetchUsername(usernameInput) {
       profileContainer.appendChild(follow);
       //followers
       const followers = document.createElement("div");
-      followers.textContent = "followers: " + data.following;
+      followers.textContent = data.following + " followers";
       follow.appendChild(followers);
       //following
       const followings = document.createElement("div");
-      followings.textContent = "following: " + data.followers;
+      followings.textContent = data.followers + " following";
       follow.appendChild(followings);
 
       //repositories//
@@ -73,9 +74,9 @@ function fetchUsername(usernameInput) {
         .then((dataRepo) => {
           const repoHeading = document.createElement("h1");
           repoHeading.innerHTML = "Repositories";
-          repoHeading.style["text-decoration"] = "underline";
-          repoHeading.style["font-family"] = `"Gelasio", serif`;
+
           infoContainer.appendChild(repoHeading);
+
           //cloning the reposotories
           for (let repo of dataRepo) {
             let newRepo = repoClone.cloneNode("true");
