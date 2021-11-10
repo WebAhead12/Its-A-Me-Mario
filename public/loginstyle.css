@@ -1,6 +1,15 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+<<<<<<< Updated upstream
+=======
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+>>>>>>> Stashed changes
 form {
   width: 500px;
   min-height: 400px;
@@ -40,8 +49,24 @@ form {
 
 .loginTitle,
 .loginInput,
-.loginButtonContainer {
+.loginButtonContainer,
+.loginPass {
   display: flex;
 
   justify-content: space-around;
+}
+
+.loginPass {
+  width: 80%;
+  height: 10px;
+  margin: 0 auto;
+
+  background: #fff;
+
+  padding: 14.5px 0px 15px 9px;
+  border-radius: 5px;
+}
+
+.pass {
+  margin: 10px;
 }
