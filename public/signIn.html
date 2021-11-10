@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/loginstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Exo+2:wght@300&family=Gelasio&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<head>
-  <meta http-equiv="Expires" content="0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/loginstyle.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Exo+2:wght@300&family=Gelasio&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-</head>
+  <body>
+    <img src="GithubLogo.png" class="githubBackground" />
+    <form action="/" method="POST" class="loginContainer">
+      <dev class="loginTitle">
+        <label class="loginLabel" for="username">Log-In</label>
+      </dev>
+      <br />
 
-<body>
-  <img src="GithubLogo.png" class="githubBackground" />
-  <form action="/" method="POST" class="loginContainer">
-    <dev class="loginTitle">
-      <label class="loginLabel" for="username">Log-In</label>
-    </dev>
-    <br />
+      <input
+        class="loginInput"
+        id="username"
+        name="username"
+        placeholder="Sign In With Your GitHub Username"
+        required
+      />
+      <br /><input
+        class="loginInput"
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Sign In With Your GitHub Password"
+        required
+      />
 
-    <input class="loginInput" id="username" name="username" placeholder="Sign In With Your GitHub Username" required />
-    <br><input class="loginInput" id="password" name="password" placeholder="Sign In With Your GitHub Password"
-      required />
+      <button class="loginButtonContainer" type="submit">
+        <i class="fa fa-github loginButton"></i>
+      </button>
+    </form>
 
-    <button class="loginButtonContainer" type="submit">
-      <i class="fa fa-github loginButton"></i>
-    </button>
-  </form>
-
-  <script src="signIn.js"></script>
-</body>
-
+    <script src="signIn.js"></script>
+  </body>
 </html>
