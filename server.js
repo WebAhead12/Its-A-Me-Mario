@@ -10,6 +10,7 @@ const verifyToken = require("./middleware/verifyToken");
 app.use(cookieParser());
 app.use(express.urlencoded());
 let newData = data;
+let PORT = process.env.PORT || 3000;
 
 app.get("/", verifyToken, (req, res) => {
   const account = req.account; //cookie
@@ -22,8 +23,8 @@ app.get("/", verifyToken, (req, res) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3000, () => {
-  console.log("listening on *:3000");
+app.listen(PORT, () => {
+  console.log("listening on *:" + PORT);
 });
 
 app.post("/", (req, res, next) => {
