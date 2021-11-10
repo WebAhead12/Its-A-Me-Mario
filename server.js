@@ -12,9 +12,9 @@ app.use(express.urlencoded());
 let newData = data;
 
 app.get("/", verifyToken, (req, res) => {
-  const username = req.username; //cookie
-  if (username) {
-    res.redirect("user/" + username.username);
+  const account = req.account; //cookie
+  if (account) {
+    res.redirect("user/" + account.username);
   } else {
     res.sendFile(path.join(__dirname, "public", "signIn.html"));
   }
@@ -26,20 +26,32 @@ app.listen(3000, () => {
   console.log("listening on *:3000");
 });
 
-app.post("/", (req, res) => {
+app.post("/", (req, res, next) => {
   const username = req.body.username;
-  const token = jwt.sign({ username }, SECRET);
-  res.cookie("username", token, { maxAge: 6000000 });
-  newData = newData.filter((element) => {
-    return element != username;
-  });
-  newData.unshift(username);
-
-  if (newData.length > 5) {
-    newData = newData.slice(0, 5);
+  const password = req.body.password;
+  const token = jwt.sign({ "username": username, "password": password }, SECRET);
+  let element = newData.find(element => username == element.username)
+  if (element) {
+    if (element.password == password) {
+      res.cookie("account", token, { maxAge: 6000000 });
+      res.redirect("/user/" + username);
+    } else {
+      console.log("Incorrect password!");
+      res.redirect("/?data=incorrect")
+    }
+  } else {
+    res.cookie("account", token, { maxAge: 6000000 });
+    newData = newData.filter((element) => {
+      return element.username != username;
+    });
+    newData.unshift({ username, password });
+    if (newData.length > 5) {
+      newData = newData.slice(0, 5);
+    }
+    fs.writeFileSync("./history/data.json", JSON.stringify(newData));
+    res.redirect("/user/" + username);
   }
-  fs.writeFileSync("./history/data.json", JSON.stringify(newData));
-  res.redirect("/user/" + username);
+
 });
 
 app.get("/user/:name", (req, res) => {
@@ -47,10 +59,10 @@ app.get("/user/:name", (req, res) => {
 });
 
 app.get("/log-out", (req, res) => {
-  res.clearCookie("username");
+  res.clearCookie("account");
   res.redirect("/");
 });
 
-app.use((req, res) => {
+app.get("*", (req, res) => {
   res.redirect("/");
 })
