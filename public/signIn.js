@@ -12,14 +12,17 @@ fetch("/data")
     data.map((names) => {
       const namess = document.createElement("div");
       namess.innerHTML = names;
+      namess.className = "lastSignedName";
       lastSearched.appendChild(namess);
     });
   })
   .catch((error) => console.error(error));
 
-//when you click out of the search input and back in it clears
-inputText.addEventListener("focusin", () => {
-  inputText.value = "";
+lastSearched.addEventListener("click", (event) => {
+  if (event.target == lastSearched) {
+    return;
+  }
+  inputText.value = event.target.innerHTML;
 });
 //when you click enter it does the same affect as clicking the github button
 inputText.addEventListener("keyup", function (event) {
