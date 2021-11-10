@@ -13,7 +13,6 @@ let newData = data;
 
 app.get("/", verifyToken, (req, res) => {
   const username = req.username; //cookie
-  console.log(username);
   if (username) {
     res.redirect("user/" + username.username);
   } else {
