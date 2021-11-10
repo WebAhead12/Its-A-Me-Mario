@@ -13,16 +13,11 @@ let newData = data;
 
 app.get("/", verifyToken, (req, res) => {
   const username = req.username; //cookie
-  console.log(username);
   if (username) {
     res.redirect("user/" + username.username);
   } else {
     res.sendFile(path.join(__dirname, "public", "signIn.html"));
   }
-});
-
-app.get("/data", (req, res) => {
-  res.send(newData);
 });
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -35,7 +30,6 @@ app.post("/", (req, res) => {
   const username = req.body.username;
   const token = jwt.sign({ username }, SECRET);
   res.cookie("username", token, { maxAge: 6000000 });
-
   newData = newData.filter((element) => {
     return element != username;
   });
@@ -56,3 +50,7 @@ app.get("/log-out", (req, res) => {
   res.clearCookie("username");
   res.redirect("/");
 });
+
+app.use((req, res) => {
+  res.redirect("/");
+})
