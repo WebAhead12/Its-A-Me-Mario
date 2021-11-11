@@ -36,6 +36,12 @@ function fetchUsername(usernameInput) {
     //creates the profile picture and the followings
     .then((data) => {
       //name
+      if (usernameInput == window.location.pathname.split("/")[2]) {
+        const hello = document.createElement("h1");
+        hello.innerHTML = `Welcome ${usernameInput}`;
+        profileContainer.appendChild(hello);
+      }
+
       const profile = document.createElement("h2");
       profile.innerHTML = `<a href=${data.html_url}>${data.login}</a>`;
       profile.className = "profileName";
