@@ -43,9 +43,4 @@ inputText.addEventListener("focusin", () => {
       githubButton.click();
     }
   });
-
-  //the whole search of a github profile starts when the github button is clicked
-  githubButton.addEventListener("click", () => {
-    const usernameInput = inputText.value;
-  })
 })
