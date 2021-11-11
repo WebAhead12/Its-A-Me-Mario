@@ -356,7 +356,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 425px) {
   .logoutBtn {
     /* margin-left: 80%; */
     left: 0;
@@ -377,6 +377,10 @@ a {
     margin: auto;
     padding: 15%;
   }
+  .profileContainer {
+    width: 80%;
+    margin-bottom: 15%;
+  }
   /* .usernameClass {
     text-align: center;
     width: 50%;
@@ -385,19 +389,18 @@ a {
   } */
 
   .usernameLabel {
-    font-size: 2vw;
+    font-size: 4vw;
   }
 
   .submitButton {
-    width: 50%;
-    height: 120%;
+    width: 60%;
+    height: 80%;
     font-size: 2.25vw;
     border-radius: 10px;
     cursor: pointer;
   }
 
   .resultsContainer {
-    margin-top: 10%;
   }
 
   .infoContainer {
@@ -408,4 +411,15 @@ a {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+}
+
+@media screen and (min-width: 426px) {
+  .profileContainer {
+    width: 30%;
+    margin-bottom: 15%;
+  }
+  .infoContainer {
+ 
+    width: 50%;
+    height: 380px;
 }
