@@ -27,8 +27,3 @@ server.js: George + Hala <br>
 # Website
 
 https://whosthatpokemonv2.herokuapp.com/
-Work Spread:
-CSS: Dana
-Javascript: George And Hala
-HTML: Dana and Hala
-Server: George and Hala
