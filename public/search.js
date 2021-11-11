@@ -6,15 +6,6 @@ const infoContainer = document.querySelector(".infoContainer");
 const repoClone = document.querySelector(".cloneRepo").cloneNode(true);
 document.querySelector(".cloneRepo").remove();
 
-fetch("/")
-  .then((response) => {
-    if (!response.ok) throw new Error(response.status);
-    return response;
-  })
-  .then((data) => {
-    console.log(data);
-  });
-
 //when you click out of the search input and back in it clears
 inputText.addEventListener("focusin", () => {
   inputText.value = "";
