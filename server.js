@@ -12,6 +12,7 @@ app.use(express.urlencoded());
 let newData = data;
 let PORT = process.env.PORT || 3000;
 
+//home page checks if there is an account
 app.get("/", verifyToken, (req, res) => {
   const account = req.account; //cookie
   if (account) {
@@ -56,7 +57,7 @@ app.post("/", (req, res, next) => {
 
 app.get("/user/:name", verifyToken, (req, res) => {
   const account = req.account;
-  if (account !== window.location.pathname.split("/")[2]) {
+  if (!account) {
     res.redirect("/");
   } else {
     res.sendFile(path.join(__dirname, "public", "search.html"));
