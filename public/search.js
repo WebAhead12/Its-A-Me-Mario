@@ -2,6 +2,7 @@ const inputText = document.querySelector("#username");
 const githubButton = document.querySelector(".submitButton");
 const profileContainer = document.querySelector(".profileContainer");
 const infoContainer = document.querySelector(".infoContainer");
+// const hello = document.querySelector(".hello");
 const repoClone = document.querySelector(".cloneRepo").cloneNode(true);
 document.querySelector(".cloneRepo").remove();
 
@@ -36,11 +37,9 @@ function fetchUsername(usernameInput) {
     //creates the profile picture and the followings
     .then((data) => {
       //name
-      if (usernameInput == window.location.pathname.split("/")[2]) {
-        const hello = document.createElement("h1");
-        hello.innerHTML = `Welcome ${usernameInput}`;
-        profileContainer.appendChild(hello);
-      }
+      // if (usernameInput == window.location.pathname.split("/")[2]) {
+      //   hello.innerHTML = `Welcome ${usernameInput}`;
+      // }
 
       const profile = document.createElement("h2");
       profile.innerHTML = `<a href=${data.html_url}>${data.login}</a>`;

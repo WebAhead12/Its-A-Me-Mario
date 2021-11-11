@@ -30,15 +30,15 @@ app.listen(PORT, () => {
 app.post("/", (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
-  const token = jwt.sign({ "username": username, "password": password }, SECRET);
-  let element = newData.find(element => username == element.username)
+  const token = jwt.sign({ username: username, password: password }, SECRET);
+  let element = newData.find((element) => username == element.username);
   if (element) {
     if (element.password == password) {
       res.cookie("account", token, { maxAge: 6000000 });
       res.redirect("/user/" + username);
     } else {
       console.log("Incorrect password!");
-      res.redirect("/?data=incorrect")
+      res.redirect("/?data=incorrect");
     }
   } else {
     res.cookie("account", token, { maxAge: 6000000 });
@@ -52,11 +52,15 @@ app.post("/", (req, res, next) => {
     fs.writeFileSync("./history/data.json", JSON.stringify(newData));
     res.redirect("/user/" + username);
   }
-
 });
 
-app.get("/user/:name", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "search.html"));
+app.get("/user/:name", verifyToken, (req, res) => {
+  const account = req.account;
+  if (account !== window.location.pathname.split("/")[2]) {
+    res.redirect("/");
+  } else {
+    res.sendFile(path.join(__dirname, "public", "search.html"));
+  }
 });
 
 app.get("/log-out", (req, res) => {
@@ -66,4 +70,4 @@ app.get("/log-out", (req, res) => {
 
 app.get("*", (req, res) => {
   res.redirect("/");
-})
+});

@@ -119,7 +119,10 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
 }
-
+.hello {
+  display: flex;
+  z-index: inherit;
+}
 .profileName {
   font-size: 20px;
   text-decoration: none;
