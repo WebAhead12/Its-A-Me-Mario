@@ -38,7 +38,9 @@ form {
   margin-left: 34%;
   margin-top: 10%;
 }
-
+.loginButton {
+  width: 100%;
+}
 .loginTitle,
 .loginInput,
 .loginButtonContainer,
