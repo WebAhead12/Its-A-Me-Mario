@@ -26,7 +26,7 @@ app.get("/", verifyToken, (req, res) => {
 //reads the public file
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("listening on *:" + PORT);
 });
 //when an account registered in it creates a cookie account
@@ -60,7 +60,7 @@ app.post("/", (req, res, next) => {
 app.get("/user/:name", verifyToken, (req, res) => {
   const account = req.account;
   if (!account) {
-    res.redirect("/?data=incorrect");
+    res.redirect("/");
   } else {
     res.sendFile(path.join(__dirname, "public", "search.html"));
   }
