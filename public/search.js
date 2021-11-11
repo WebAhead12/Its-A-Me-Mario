@@ -27,11 +27,6 @@ function fetchUsername(usernameInput) {
     })
     //creates the profile picture and the followings
     .then((data) => {
-      //name
-      // if (usernameInput == window.location.pathname.split("/")[2]) {
-      //   hello.innerHTML = `Welcome ${usernameInput}`;
-      // }
-
       const profile = document.createElement("h2");
       profile.innerHTML = `<a href=${data.html_url}>${data.login}</a>`;
       profile.className = "profileName";
@@ -103,6 +98,7 @@ function fetchUsername(usernameInput) {
       }, 5000);
     });
 }
+//when the search button is clicked it clears the html and the profile to make another search
 githubButton.addEventListener("click", () => {
   infoContainer.innerHTML = "";
   profileContainer.innerHTML = "";
